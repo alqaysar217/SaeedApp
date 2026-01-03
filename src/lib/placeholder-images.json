@@ -1,0 +1,10 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A serene and peaceful background for the app's main page, showing the interior of a beautiful mosque.",
+      "imageUrl": "https://i.pinimg.com/736x/69/a1/18/69a118a936edf2b47c08ac53066eb208.jpg",
+      "imageHint": "mosque interior"
+    }
+  ]
+}

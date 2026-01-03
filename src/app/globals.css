@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 25% 94%; /* #F4F1EC */
+    --foreground: 0 0% 17%; /* #2B2B2B */
+    
+    --card: 40 33% 97%; /* #FBFAF7 */
+    --card-foreground: 0 0% 17%;
+    
+    --popover: 40 33% 97%;
+    --popover-foreground: 0 0% 17%;
+    
+    --primary: 163 44% 34%; /* #2F7D68 */
+    --primary-foreground: 163 25% 95%;
+
+    --secondary: 203 26% 50%; /* #5F8FA3 */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 38 15% 90%; /* #E9E6E1 */
+    --muted-foreground: 0 0% 44%; /* #6F6F6F */
+    
+    --accent: 45 48% 53%; /* #C2A14D */
+    --accent-foreground: 0 0% 17%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 33% 97%;
+
+    --border: 38 15% 85%; /* #DAD6CF */
+    --input: 38 15% 85%;
+    --ring: 163 44% 34%;
+    
+    --radius: 0.8rem;
+
+    --shadow-color: 163 40% 10%;
+    --shadow-strength: 4%;
+    --shadow-sm: 0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+    --shadow-md:
+      0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+      0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+    --shadow-lg:
+      0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+      0 4px 6px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 8%)),
+      0 10px 15px -3px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 8%));
+  }
+ 
+  .dark {
+    --background: 240 5% 8%; /* #121212 */
+    --foreground: 0 0% 93%; /* #EDEDED */
+
+    --card: 240 5% 12%; /* #1E1E1E */
+    --card-foreground: 0 0% 93%;
+
+    --popover: 240 5% 12%;
+    --popover-foreground: 0 0% 93%;
+    
+    --primary: 163 44% 45%; /* #429B85 - Lighter shade for dark mode */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 203 26% 60%; /* #79A7BB - Lighter shade for dark mode */
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 5% 18%; /* #292929 */
+    --muted-foreground: 0 0% 61%; /* #9CA3AF */
+
+    --accent: 45 48% 63%; /* #D9B86A - Lighter shade for dark mode */
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 22%; /* #343434 */
+    --input: 240 5% 22%;
+    --ring: 163 44% 45%;
+
+    --shadow-color: 163 50% 2%;
+    --shadow-strength: 2%;
+    --shadow-sm: 0 1px 2px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 9%));
+    --shadow-md:
+      0 3px 5px -2px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 3%)),
+      0 7px 14px -5px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 5%));
+    --shadow-lg:
+      0 -1px 3px 0 hsl(var(--shadow-color) / calc(var(--shadow-strength) + 2%)),
+      0 4px 6px -1px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 8%)),
+      0 10px 15px -3px hsl(var(--shadow-color) / calc(var(--shadow-strength) + 8%));
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
