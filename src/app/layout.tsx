@@ -19,12 +19,11 @@ const font = IBM_Plex_Sans_Arabic({
 export const metadata: Metadata = {
   title: 'Saeed | سعيد',
   description: 'تطبيق إسلامي - صدقة جارية عن روح محمد سعيد عبدالله الاشولي',
-  manifest: '/manifest.json', // ربط ملف المانيفست الموجود في مجلد public
+  manifest: '/manifest.json', // ربط ملف المانيفست الأساسي
   icons: {
-    icon: '/favicon.ico', // الأيقونة الافتراضية للمتصفح
-    apple: [
-      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' }, // أيقونة أجهزة أبل
-    ],
+    icon: '/favicon.ico', // أيقونة المتصفح
+    apple: '/apple-touch-icon.png', // أيقونة أجهزة أبل
+    shortcut: '/favicon.ico',
   },
 };
 
