@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import MobileLayout from '@/components/MobileLayout';
@@ -8,16 +8,33 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import { AudioProvider } from '@/context/AudioPlayerContext';
 import GlobalAudioPlayer from '@/components/GlobalAudioPlayer';
 
+// إعداد الخط العربي المستخدم في التطبيق
 const font = IBM_Plex_Sans_Arabic({
   subsets: ['arabic'],
   weight: ['300', '400', '500', '700'],
   variable: '--font-body',
 });
 
+// إعدادات الـ Metadata لربط الـ PWA والأيقونات
 export const metadata: Metadata = {
   title: 'Saeed | سعيد',
   description: 'تطبيق إسلامي - صدقة جارية عن روح محمد سعيد عبدالله الاشولي',
-  manifest: '/manifest.json',
+  manifest: '/manifest.json', // ربط ملف المانيفست الموجود في مجلد public
+  icons: {
+    icon: '/favicon.ico', // الأيقونة الافتراضية للمتصفح
+    apple: [
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' }, // أيقونة أجهزة أبل
+    ],
+  },
+};
+
+// إعدادات شاشة العرض ولون شريط العنوان في الجوال
+export const viewport: Viewport = {
+  themeColor: '#2F7D68', // اللون الأخضر المختار لشريط النظام
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({
